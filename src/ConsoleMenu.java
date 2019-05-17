@@ -23,7 +23,7 @@ public class ConsoleMenu {
             }
             else if (input.matches("(cd [a-zA-Z]+)")){
                 input = input.substring(3,input.length());
-                Folder newObject = (Folder) used.check(input);
+                Folder newObject = (Folder) used.checkChildren(input);
                 if(newObject != null) used = newObject;
                 else System.out.println("Unknown path! :/");
             }

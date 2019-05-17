@@ -13,7 +13,7 @@ public class Folder extends PatternClass {
         elements.add(j);
     }
 
-    public PatternClass check(String input) {
+    public PatternClass checkChildren(String input) {
         for (PatternClass j : elements) {
             if (j.type.equals("DIR") && j.name.equals(input)) return j;
         }
