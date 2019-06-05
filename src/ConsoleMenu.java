@@ -21,7 +21,7 @@ public class ConsoleMenu {
                     used = (Folder) used.parent;
                 }
             }
-            else if (input.matches("(cd [a-zA-Z]+)")){
+            else if (input.matches("(cd [a-zA-Z0-9]+.)")){
                 input = input.substring(3,input.length());
                 Folder newObject = (Folder) used.checkChildren(input);
                 if(newObject != null) used = newObject;
